@@ -1,0 +1,348 @@
+/* ===== FRUVI - shared styles ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #4CD137 0%, #A9D639 55%, #E3D94A 100%);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== Page 1 - Splash (index.html) ===== */
+
+.splash-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.splash-logo-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 40px;
+}
+
+.logo-line {
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.splash-fruit-strip {
+  width: 100%;
+  display: block;
+}
+
+.tap-hint {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0.8;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+/* ===== Page 2 - Home (home.html) ===== */
+
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 32px 0;
+}
+
+.home-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.home-tagline {
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 26px;
+  max-width: 300px;
+}
+
+.home-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.btn-pill {
+  width: 100%;
+  padding: 16px;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.btn-login-home {
+  background: #4E7F1E;
+  color: #ffffff;
+}
+
+.btn-signup-home {
+  background: #F7F9F1;
+  color: #333333;
+}
+
+.home-fruit-strip {
+  width: 100%;
+  margin-top: auto;
+  display: block;
+}
+
+/* ===== Page 3 / 4 - Login & Signup (login.html / signup.html) ===== */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.auth-model {
+  width: 100%;
+  display: block;
+  margin-top: 18px;
+}
+
+.auth-logo {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 10px 0 18px;
+}
+
+.auth-panel {
+  width: 100%;
+  flex: 1;
+  background: linear-gradient(180deg, rgba(45, 90, 10, 0.72), rgba(70, 110, 20, 0.72)),
+              linear-gradient(180deg, #4CD137 0%, #E3D94A 100%);
+  border-radius: 32px 32px 0 0;
+  padding: 28px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tab toggle */
+.tab-toggle {
+  width: 100%;
+  display: flex;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.tab-toggle a {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 26px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4CAF50;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-toggle a.active {
+  background: #3F6D1F;
+  color: #ffffff;
+}
+
+/* Form */
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+}
+
+.field input {
+  width: 100%;
+  padding: 15px 46px 15px 18px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  outline: none;
+  background: #ffffff;
+  color: #333333;
+}
+
+.field input::placeholder {
+  color: #9AA79A;
+  font-size: 15px;
+}
+
+.field .icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #6b7a6b;
+  pointer-events: none;
+}
+
+.field .icon.clickable {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.field-error {
+  color: #ffe4b8;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: none;
+}
+
+.forgot-link {
+  align-self: flex-end;
+  color: #eaf5e0;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: -6px;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 30px;
+  background: #FD8F00;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #e58200;
+}
+
+.switch-text {
+  margin-top: 16px;
+  color: #eaf5e0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.switch-text a {
+  color: #d6ffb0;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Page 5 / 6 - Success screens ===== */
+
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  background: linear-gradient(180deg, #4CD137 0%, #E3D94A 100%);
+}
+
+.result-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+}
+
+.result-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.result-subtitle {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.result-page.dark .result-title,
+.result-page.dark .result-subtitle {
+  color: #1c1c1c;
+}
+
+.back-home-link {
+  margin-top: 30px;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: underline;
+}

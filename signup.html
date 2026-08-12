@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruvi - Signup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-page">
+  <img src="assets/model.png" alt="Fruvi" class="auth-model">
+  <div class="auth-logo">FRUVI</div>
+
+  <div class="auth-panel">
+    <div class="tab-toggle">
+      <a href="login.html">Login</a>
+      <a href="signup.html" class="active">Signup</a>
+    </div>
+
+    <form id="signupForm" class="auth-form" novalidate>
+      <div class="field">
+        <input type="text" id="signupName" placeholder="Name">
+        <span class="icon">&#128100;</span>
+      </div>
+      <div class="field-error" id="signupNameError">Please enter your name</div>
+
+      <div class="field">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <span class="icon">&#9993;</span>
+      </div>
+      <div class="field-error" id="signupEmailError">Please enter a valid email</div>
+
+      <div class="field">
+        <input type="tel" id="signupMobile" placeholder="Mobile Number">
+        <span class="icon">&#128222;</span>
+      </div>
+      <div class="field-error" id="signupMobileError">Please enter a valid 10-digit number</div>
+
+      <div class="field">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <span class="icon clickable" id="signupEyeIcon" onclick="togglePassword('signupPassword', this)">&#128065;</span>
+      </div>
+      <div class="field-error" id="signupPasswordError">Password must be at least 6 characters</div>
+
+      <button type="submit" class="submit-btn">Signup</button>
+
+      <div class="switch-text">Already have an account ? <a href="login.html">Login up</a></div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

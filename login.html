@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruvi - Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-page">
+  <img src="assets/model.png" alt="Fruvi" class="auth-model">
+  <div class="auth-logo">FRUVI</div>
+
+  <div class="auth-panel">
+    <div class="tab-toggle">
+      <a href="login.html" class="active">Login</a>
+      <a href="signup.html">Signup</a>
+    </div>
+
+    <form id="loginForm" class="auth-form" novalidate>
+      <div class="field">
+        <input type="email" id="loginEmail" placeholder="AK@gmail.com">
+        <span class="icon">&#9993;</span>
+      </div>
+      <div class="field-error" id="loginEmailError">Please enter a valid email</div>
+
+      <div class="field">
+        <input type="password" id="loginPassword" placeholder="********">
+        <span class="icon clickable" id="loginEyeIcon" onclick="togglePassword('loginPassword', this)">&#128065;</span>
+      </div>
+      <div class="field-error" id="loginPasswordError">Password must be at least 6 characters</div>
+
+      <a href="#" class="forgot-link">Forget Password ?</a>
+
+      <button type="submit" class="submit-btn">Login</button>
+
+      <div class="switch-text">Don't have an account ? <a href="signup.html">Signup</a></div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
